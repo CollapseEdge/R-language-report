@@ -110,7 +110,7 @@ options (warn = -1)
 ```
 
 ```{r 读取数据}
-data1 = read.csv("C:\\Users\\che\\Desktop\\R语言期末报告\\Air_Quality.csv")
+data1 = read.csv("https://raw.githubusercontent.com/CollapseEdge/R-language-report/main/datasets/Air_Quality.csv")
 summary(data1)
 head(data1)
 aggr(data1,prop=FALSE,numbers=TRUE,cex.axis=.5)
@@ -126,7 +126,7 @@ pm0911 = data2[which(data2$Time.Period== '2009-2011'), ]
 ggplot(pm0911,mapping=aes(x=Geo.Place.Name,y=Data.Value,fill=Geo.Place.Name))+geom_bar(stat = "identity")+theme(axis.text.x = element_text(size = 6, angle = 90, hjust = 1))+labs(x = "地区", y = "每千人中的死亡人数", title = "2009-2011年不同地区的每千人死亡人数-与PM2.5相关")
 ```
 
-![](1.png)
+![](pic/1.png)
 
 Draw changes in ozone content in some cities from 2009 to 2017
 
@@ -241,7 +241,7 @@ rm(list = ls())
 ```
 
 ```{r 加载第二个数据集}
-data <- read.csv("C:\\Users\\che\\Desktop\\R语言期末报告\\rdu-weather-history.csv", sep = ";")
+data <- read.csv("https://raw.githubusercontent.com/CollapseEdge/R-language-report/main/datasets/rdu-weather-history.csv", sep = ";")
 
 summary(data)
 head(data)
@@ -403,7 +403,7 @@ library(GGally)
 ggpairs(data)
 ```
 
-![](2.png)
+![](pic/2.png)
 
 ```         
 library(corrplot)
@@ -422,7 +422,7 @@ cor_matrix <- cor(data)
 corrplot(cor_matrix, method = "color")
 ```
 
-![](Rplot.png)
+![](pic/Rplot.png)
 
 ## PART 3
 
@@ -475,7 +475,7 @@ library(dplyr)
 ```
 
 ```{r 载入数据}
-data <- read.csv("C:\\Users\\che\\Desktop\\R语言期末报告\\london_weather.csv")
+data <- read.csv("https://raw.githubusercontent.com/CollapseEdge/R-language-report/main/datasets/london_weather.csv")
 summary(data)
 ```
 
@@ -534,7 +534,7 @@ library(GGally)
 ggpairs(data)
 ```
 
-![](pairplot.png)
+![](pic/pairplot.png)
 
 > This pair diagram can reflect the visualization of data
 
@@ -652,7 +652,7 @@ labs(x = "Actual mean_temp", y = "Predicted mean_temp", title = "XgBoost Regress
 theme_minimal()
 ```
 
-![](result1.png)
+![](pic/result1.png)
 
 We can see that the values of mae and mse are too high while R-squared is to 0 , indicating that the performance of this model is not excellent.**poor model fit**
 
